@@ -1,2 +1,2 @@
 # orgasm :smirk:
-An assembler for fun (and for humor). Started as a joke on Discord.
+An assembly lanugage for fun (and for the sake of orgasms). Started as a joke on Discord.
