@@ -12,10 +12,16 @@ void org_asm(char args[], char file[]){
       printf("Error: no arguments!");
     }
   }
-  else if(strcmp(args[1], "help") == 0) {
+  else if(strcmp(args[0], "help") == 0) {
     printf("orgasm is an assembly language and assembler that started as a joke on Discord.\n");
     printf("Usage: \n");
     printf("./org-asm help\n");
     return;
+  }
+  else if(strcmp(args[0], "run") == 0) {
+    if(!file) {
+      printf("Error: no files to run.");
+      return;
+    }
   }
 }
