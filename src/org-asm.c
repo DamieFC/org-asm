@@ -23,5 +23,8 @@ void org_asm(char args[], char file[]){
       printf("Error: no files to run.");
       return;
     }
+    else if(!strcmp(file[0], ".asm") || !strcmp(file[0], ".s") >= 0) {
+      printf("Error: file not assembly (.asm or .s)!");
+    }
   }
 }
