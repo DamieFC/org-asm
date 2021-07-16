@@ -29,5 +29,8 @@ void org_asm(char args[], char file[]){
       printf("Error: file not assembly (.asm or .s)! Note, has to be lowercase.\n");
       return;
     }
+    else {
+      // idk
+    }
   }
 }
