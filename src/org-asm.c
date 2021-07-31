@@ -30,7 +30,7 @@ void org_asm(char args[], char file[]){
       return;
     }
     else {
-      // idk
+      // idk, the language stuff will go here
     }
   }
 }
