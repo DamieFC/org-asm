@@ -26,7 +26,7 @@ void org_asm(char args[], char file[]){
       printf("Error: no files to run.\n");
       return;
     }
-    else if(!strcmp(file[0], ".asm") || !strcmp(file[0], ".s") >= 0) {
+    else if(!strcmp(file[0], ".asm") >= 0 || !strcmp(file[0], ".s") >= 0) {
       printf("Error: file not assembly (.asm or .s)! Now can be uppercase and lowercase.\n");
       return;
     }
