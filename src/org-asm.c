@@ -14,6 +14,7 @@ void org_asm(char args[], char file[]){
     }
   }
   tolower(args[]);
+  tolower(file[])
   else if(strcmp(args[0], "help") == 0) {
     printf("orgasm is an assembly language and assembler that started as a joke on Discord.\n");
     printf("Usage: \n");
@@ -26,7 +27,7 @@ void org_asm(char args[], char file[]){
       return;
     }
     else if(!strcmp(file[0], ".asm") || !strcmp(file[0], ".s") >= 0) {
-      printf("Error: file not assembly (.asm or .s)! Note, has to be lowercase.\n");
+      printf("Error: file not assembly (.asm or .s)! Now can be uppercase and lowercase.\n");
       return;
     }
     else {
