@@ -26,12 +26,19 @@ void org_asm(char args[], char file[]){
       printf("Error: no files to run.\n");
       return;
     }
+    else if(sizeof(file) > 1) {
+      printf("Error: more than 1 file. Right now there's only one file at a time.");
+      return;
+    }
     else if(!strcmp(file[0], ".asm") >= 0 || !strcmp(file[0], ".s") >= 0) {
       printf("Error: file not assembly (.asm or .s)! Now can be uppercase and lowercase.\n");
       return;
     }
     else {
-      // idk, the language stuff will go here
+      char code = fopen(file[1]);
+      if(code == "nop") {
+        code++;
+      }
     }
   }
 }
