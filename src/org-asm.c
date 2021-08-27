@@ -48,6 +48,9 @@ void org_asm(char args[], char file[]){
       else if(code == "hlt") {
         exit(EXIT_SUCCESS);
       }
+      else if(code == "hcf") {
+        exit(EXIT_SUCCESS);
+      }
     }
   }
 }
