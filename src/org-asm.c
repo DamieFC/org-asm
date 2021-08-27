@@ -39,6 +39,11 @@ void org_asm(char args[], char file[]){
       if(code == "nop") {
         code++;
       }
+      else if(code == ";") {
+        while(code != "\n") {
+          code++;
+        }
+      }
     }
   }
 }
