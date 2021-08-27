@@ -4,6 +4,7 @@
  **************************************************************/
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
 
@@ -43,6 +44,9 @@ void org_asm(char args[], char file[]){
         while(code != "\n") {
           code++;
         }
+      }
+      else if(code == "hlt") {
+        exit(EXIT_SUCCESS);
       }
     }
   }
