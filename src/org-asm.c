@@ -21,39 +21,34 @@ void org_asm(char args[], char file[]){
     printf("Usage: \n");
     printf("./org-asm help\n");
     return;
-  }
-  else if(strcmp(args[0], "run") == 0) {
-    if(!file) {
-      printf("Error: no files to run.\n");
-      return;
-    }
-    else if(sizeof(file) > 1) {
-      printf("Error: more than 1 file. Right now there's only one file at a time.");
-      return;
-    }
-    else if(!strcmp(file[0], ".asm") >= 0 || !strcmp(file[0], ".s") >= 0) {
-      printf("Error: file not assembly (.asm or .s)! Now can be uppercase and lowercase.\n");
-      return;
-    }
-    else {
-      char code = fopen(file[0], "r");
-      if(code == "nop") {
-        code++;
-      }
-      else if(code == ";") {
-        while(code != "\n") {
+  } else if(strcmp(args[0], "run") == 0) {
+      if(!file) {
+        printf("Error: no files to run.\n");
+        return;
+      } else if(sizeof(file) > 1) {
+        printf("Error: more than 1 file. Right now there's only one file at a time.");
+        return;
+      } else if(!strcmp(file[0], ".asm") >= 0 || !strcmp(file[0], ".s") >= 0) {
+        printf("Error: file not assembly (.asm or .s)! It can be uppercase and lowercase.\n");
+        return;
+      } else {
+        char code = fopen(file[0], "r");
+        if(code == "nop") {
           code++;
         }
-      }
-      else if(code == "hlt") {
-        exit(EXIT_SUCCESS);
-      }
-      else if(code == "hcf") {
-        exit(EXIT_SUCCESS);
-      }
-      else {
-        printf("Error: error in the code or in this program");
+        else if(code == ";") {
+          while(code != "\n") {
+            code++;
+          }
+        }
+        else if(code == "hlt") {
+          exit(EXIT_SUCCESS);
+        }
+        else if(code == "hcf") {
+          exit(EXIT_SUCCESS);
+        } else {
+          printf("Error: error in the code or in this program");
+        }
       }
     }
-  }
 }
