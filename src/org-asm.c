@@ -14,8 +14,8 @@ void org_asm(char args[], char file[]){
       printf("Error: no arguments!\n");
     }
   }
-  tolower(args[]);
-  tolower(file[])
+  tolower(args[0]);
+  tolower(file[0])
   else if(strcmp(args[0], "help") == 0) {
     printf("orgasm is an assembly language and assembler that started as a joke on Discord.\n");
     printf("Usage: \n");
@@ -36,7 +36,7 @@ void org_asm(char args[], char file[]){
       return;
     }
     else {
-      char code = fopen(file[1]);
+      char code = fopen(file[0]);
       if(code == "nop") {
         code++;
       }
