@@ -51,6 +51,9 @@ void org_asm(char args[], char file[]){
       else if(code == "hcf") {
         exit(EXIT_SUCCESS);
       }
+      else {
+        printf("Error: error in the code or in this program");
+      }
     }
   }
 }
