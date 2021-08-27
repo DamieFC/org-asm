@@ -15,7 +15,7 @@ void org_asm(char args[], char file[]){
     }
   }
   tolower(args[0]);
-  tolower(file[0])
+  tolower(file[0]);
   else if(strcmp(args[0], "help") == 0) {
     printf("orgasm is an assembly language and assembler that started as a joke on Discord.\n");
     printf("Usage: \n");
