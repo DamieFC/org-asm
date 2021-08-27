@@ -36,7 +36,7 @@ void org_asm(char args[], char file[]){
       return;
     }
     else {
-      char code = fopen(file[0]);
+      char code = fopen(file[0], "r");
       if(code == "nop") {
         code++;
       }
