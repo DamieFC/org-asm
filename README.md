@@ -1,5 +1,5 @@
 # org-asm :smirk:
-An assembly lanugage for fun (and for the sake of orgasms). Started as a joke on Discord.
+An assembly lanugage for fun (and for the sake of orgasms). Started as a joke on Discord. It's going to be used for [dfcpu](https://github.com/DamieFC/dfcpu)
 ## How should I say this so I don't get sent to the Dean's office?
 Say it as "orgasm assembly" or "org assembly".
 ## Building
