@@ -2,5 +2,5 @@
 
 ; comment
 
-nop
-hlt
+nope
+halt
