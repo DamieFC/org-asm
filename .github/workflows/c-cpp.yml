@@ -17,3 +17,5 @@ jobs:
       run: make all
     - name: ls
       run: ls
+    - name: help
+      run: ./orgasm help
