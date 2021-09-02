@@ -1,6 +1,6 @@
-; HCF version of test.asm
+; Halt and Catch Fire version of test.asm
 
 ; comment
 
-nop
+nope
 hcf
