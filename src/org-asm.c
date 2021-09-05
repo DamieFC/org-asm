@@ -8,13 +8,18 @@
 #include <string.h>
 #include <ctype.h>
 
-void org_asm(char args[], char file[]){
+int org_asm(char args[], char file[]){
   tolower(args[0]);
   tolower(file[0]);
   if(!file){
     if(!args){
       printf("Error: no arguments!\n");
+      return(1);
     }
+  }
+  else {
+    printf("Error: no files");
+    return(1);
   }
   else if(strcmp(args[0], "help") == 0) {
     printf("orgasm is an assembly language and assembler that started as a joke on Discord.\n");
@@ -39,7 +44,6 @@ void org_asm(char args[], char file[]){
           }
         else if(code == "nope") {
           code++;
-        }
         } else if(strcmp(code, "halt") ==0) {
           exit(EXIT_SUCCESS);
         } else if(strcmp(code, "hcf") == 0) {
