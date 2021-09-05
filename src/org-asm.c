@@ -33,21 +33,19 @@ void org_asm(char args[], char file[]){
         return;
       } else {
         char code = fopen(file[0], "r");
-        if(code == "nope") {
-          code++;
-        }
-        else if(strcmp(code, ";") == 0) {
+        if(strcmp(code, ";") == 0) {
           while(code != "\n") {
             code++;
           }
+        else if(code == "nope") {
+          code++;
         }
-        else if(strcmp(code, "halt") ==0) {
+        } else if(strcmp(code, "halt") ==0) {
           exit(EXIT_SUCCESS);
-        }
-        else if(strcmp(code, "hcf") == 0) {
+        } else if(strcmp(code, "hcf") == 0) {
           exit(EXIT_SUCCESS);
         } else {
-          printf("Error: error in the code or in this program");
+          printf("Error: error in the code (nitwit) or in this program (bad Damien)");
         }
       }
     }
