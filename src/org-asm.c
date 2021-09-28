@@ -40,9 +40,9 @@ int org_asm(char args[], char file[]){
         char code[] = fopen(file[0], "r");
         if(strcmp(code, ";") == 0) {
           while(code != "\n") {
-            code++;
+            ++code;
           }
-        else if(code == "nope") {
+        } else if(code == "nope") {
           code++;
         } else if(strcmp(code, "halt") ==0) {
           exit(EXIT_SUCCESS);
