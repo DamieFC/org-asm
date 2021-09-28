@@ -29,13 +29,13 @@ int org_asm(char args[], char file[]){
   } else if(strcmp(args[0], "run") == 0) {
       if(!file) {
         printf("Error: no files to run.\n");
-        return;
+        return(1);
       } else if(sizeof(file) > 1) {
         printf("Error: more than 1 file. Right now there's only one file at a time.");
-        return;
+        return(1);
       } else if(!strcmp(file[0], ".asm") >= 0 || !strcmp(file[0], ".s") >= 0) {
         printf("Error: file not assembly (.asm or .s)! It can be uppercase and lowercase.\n");
-        return;
+        return(1);
       } else {
         char code[] = fopen(file[0], "r");
         int position = 0;
@@ -44,7 +44,7 @@ int org_asm(char args[], char file[]){
             code[position]++;
           }
         } else if(code == "nope") {
-          code++;
+          code[position]++;
         } else if(strcmp(code, "halt") ==0) {
           exit(EXIT_SUCCESS);
         } else if(strcmp(code, "hcf") == 0) {
