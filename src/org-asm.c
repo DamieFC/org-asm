@@ -37,7 +37,7 @@ int org_asm(char args[], char file[]){
         printf("Error: file not assembly (.asm or .s)! It can be uppercase and lowercase.\n");
         return(1);
       } else {
-        char code[] = fopen(file[0], "r");
+        char *code[] = fopen(file[0], "r");
         int position = 0;
         if(strcmp(code, ";") == 0) {
           while(code != "\n") {
