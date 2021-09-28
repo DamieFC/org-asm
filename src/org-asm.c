@@ -38,9 +38,10 @@ int org_asm(char args[], char file[]){
         return;
       } else {
         char code[] = fopen(file[0], "r");
+        int position = 0;
         if(strcmp(code, ";") == 0) {
           while(code != "\n") {
-            ++code;
+            code[position]++;
           }
         } else if(code == "nope") {
           code++;
