@@ -42,10 +42,10 @@ int org_asm(char args[], char file[]){
         int position = 0;
         if(strcmp(code, ";") == 0) {
           while(code != "\n") {
-            code[position]++;
+            //code[position]++;
           }
         } else if(code == "nope") {
-          code[position]++;
+          //code[position]++;
         } else if(strcmp(code, "halt") ==0) {
           exit(EXIT_SUCCESS);
         } else if(strcmp(code, "hcf") == 0) {
