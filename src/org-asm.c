@@ -46,12 +46,10 @@ int org_asm(char args[], char file[]){
           exit(EXIT_SUCCESS);
         } else {
           printf("Error: error in the code (nitwit) or in this program (bad Damien)");
-        }
-      }
- 	    else {
+      } else {
         printf("Error: no files");
         return(1);
       }
-
+    }
   }
 }
