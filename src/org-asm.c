@@ -15,11 +15,7 @@ int org_asm(char args[], char file[]){
     if(!args){
       printf("Error: no arguments!\n");
       return(1);
-    }
-  } else {
-    printf("Error: no files");
-    return(1);
-  } else if(strcmp(args[0], "help") == 0) {
+    } else if(strcmp(args[0], "help") == 0) {
     printf("orgasm is an assembly language and assembler that started as a joke on Discord.\n");
     printf("Usage: \n");
     printf("./org-asm help\n");
@@ -52,5 +48,10 @@ int org_asm(char args[], char file[]){
           printf("Error: error in the code (nitwit) or in this program (bad Damien)");
         }
       }
-    }
+ 	    else {
+        printf("Error: no files");
+        return(1);
+      }
+
+  }
 }
