@@ -8,8 +8,8 @@
 #include <stddef.h>
 #include <string.h>
 
-int org_asm(char usage[], char args[]) {
-  if(strcmp(usage[0], "help")) {
+int org_asm(char *usage[], char *args[]) {
+  if(strcmp(usage[0], "help") == 0) {
     printf("./orgasm <usage> <args>\n");
     printf("Options for usage: help\n");
   }
