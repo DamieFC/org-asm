@@ -6,9 +6,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stddef.h>
+#include <string.h>
 
 int org_asm(char usage[], char args[]) {
-  if(usage[0] = "help") {
+  if(strcmp(usage[0], "help")) {
     printf("./orgasm <usage> <args>\n");
     printf("Options for usage: help\n");
   }
